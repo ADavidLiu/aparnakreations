@@ -1,0 +1,66 @@
+.btn {
+    padding: 1.5rem 2.5rem;
+    min-width: 190px;
+    background-color: $color-primary;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $font-main;
+    color: $color-white;
+    font-size: 1.333rem;
+    letter-spacing: 0.2em;
+    border-radius: 3px;
+    transition: all .25s;
+    @include linkStates($color-white, none);
+    @include atSmall {
+        padding: 0.875rem 1.875rem;
+        font-size: 1rem;
+    }
+
+    &__icon {
+        margin-left: 1rem;
+        @include atSmall {
+            margin-left: 0.75rem;
+        }
+    }
+
+    &:hover {
+        border-color: $color-primary;
+        background-color: transparent;
+        color: $color-primary;
+
+        svg polygon {
+            fill: $color-primary;
+        }
+    }
+
+    &--full {
+        width: 100%;
+    }
+
+    &--small {
+        max-width: 194px;
+    }
+
+    &--alt {
+        padding: 1rem 2.5rem;
+        letter-spacing: 0.04em;
+        box-shadow: 0px 3px 3px 0px rgba(14, 15, 15, 0.25);
+        border: 1px solid $color-primary-light;
+        @include atSmall {
+            padding: 0.75rem 1.875rem;
+        }
+        
+        &:hover {
+            border-color: $color-primary-light;
+        }
+    }
+
+    &--no-hover {
+        &:hover {
+            background-color: $color-primary;
+            color: $color-white;
+            border-color: $color-primary-light;
+        }
+    }
+}

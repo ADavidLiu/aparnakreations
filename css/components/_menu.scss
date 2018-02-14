@@ -1,0 +1,52 @@
+.menu {
+    @include atSmall {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    &__item {
+        text-align: center;
+    }
+
+    &__link {
+        display: inline-block;
+        font-family: $font-main;
+        font-size: 1.167rem;
+        padding: 10px 1.667rem;
+        @include linkStates($color-white, none);
+        @include atSmall {
+            padding: 10px 1.25rem;
+            font-size: 0.875rem;
+            @include linkStates($color-text, none);
+        }
+
+        &--cta {
+            border: 1px solid $color-white;
+            transition: all .25s;
+            margin-top: 10px;
+            @include atSmall {
+                margin-top: 0;
+                margin-left: 10px;
+                border-color: $color-primary;
+            }
+
+            &:hover {
+                background-color: $color-white;
+                color: $color-primary;
+                @include atSmall {
+                    background-color: $color-primary;
+                    color: $color-white;
+                }
+            }
+        }
+    }
+
+    &--alt {
+        .menu {
+            &__link {
+                @include linkStates($color-white, none);
+            }
+        }
+    }
+}

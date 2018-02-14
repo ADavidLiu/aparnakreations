@@ -1,0 +1,11 @@
+.section-cta {
+    background-color: $color-primary;
+    padding: 5.833rem 15px;
+    @include atSmall {
+        padding: 4.375rem 15px;
+    }
+
+    &__copy {
+        text-align: center;
+    }
+}

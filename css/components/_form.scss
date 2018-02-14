@@ -1,0 +1,163 @@
+.form {
+    width: 100%;
+    max-width: 590px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__input-wrapper {
+        position: relative;
+
+        &:not(:first-child),
+        &:not(:last-child) {
+            margin: 1.667rem 0;
+            @include atSmall {
+                margin: 1.25rem 0;
+            }
+        }
+    }
+
+    &__input-group {
+        @include atSmall {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        & > * {
+            flex: 1 1 0;
+
+            & + * {
+                @include atSmall {
+                    margin-top: 0 !important;
+                    margin-left: 1.25rem;
+                }
+            }
+        }
+
+        &:not(:first-child),
+        &:not(:last-child) {
+            margin: 1.667rem 0;
+            @include atSmall {
+                margin: 1.25rem 0;
+            }
+        }
+    }
+
+    &__input {
+        background-color: $color-gray-dark-light;
+        border: 1px solid $color-gray-border;
+        padding: 1rem;
+        font-family: $font-main;
+        font-size: 1.333rem;
+        letter-spacing: 0.04em;
+        color: $color-white;
+        border-radius: 3px;
+        width: 100%;
+        appearance: none;
+        @include atSmall {
+            padding: 0.75rem;
+            font-size: 1rem;
+        }
+
+        option {
+            color: $color-text;
+        }
+
+        &-inner-text {
+            width: auto;
+            max-width: 4.75rem;
+            padding: 0;
+            position: absolute;
+            border-radius: 0;
+            top: 50%;
+            left: 1.667rem;
+            transform: translateY(-50%);
+            border-right: 1px solid $color-white !important;
+            @include atSmall {
+                left: 1.25rem;
+                padding-right: 2.1875rem;
+            }
+
+            & + .form__input {
+                padding-left: 7.8125rem;
+            }
+        }
+
+        &-arrow {
+            position: absolute;
+            top: 50%;
+            right: 2.5rem;
+            pointer-events: none;
+            transform: translateY(-50%);
+            color: $color-white;
+            font-size: 2.5rem;
+            @include atSmall {
+                font-size: 1.875rem;
+            }
+        }
+
+        &::placeholder {
+            color: $color-white;
+        }
+
+        &--icon {
+            padding-right: 6.5rem;
+            @include atSmall {
+                padding-right: 4.875rem;
+            }
+        }
+
+        &--alt {
+            background-color: rgba($color-gray-alt, .1);
+            padding-left: 2.5rem;
+
+            & + & {
+                margin-top: 1.667rem;
+                @include atSmall {
+                    margin-top: 1.25rem;
+                }
+            }
+        }
+
+        &--transparent {
+            background: none;
+            border: 0;
+        }
+    }
+
+    &__item {
+        & + & {
+            margin-top: 1.333rem;
+            @include atSmall {
+                margin-top: 2.8125rem;
+            }
+        }
+    }
+
+    &--small {
+        max-width: 390px;
+    }
+    
+    &--inline {
+        max-width: none;
+        @include atSmall {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .form {
+            &__item {
+                & + .form__item {
+                    @include atSmall {
+                        margin-top: 0;
+                        margin-left: 2.8125rem;
+                    }
+                }
+            }
+
+            &__btn {
+                min-width: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.testimonial {
+    text-align: center;
+    position: relative;
+    padding: calc(61px + 1.667rem) 2rem;
+    @include atSmall {
+        margin: 0 auto;
+        padding: calc(61px + 1.25rem) 8rem;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        background-image: url("../images/quotes.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        left: 50%;
+        width: 97px;
+        height: 61px;
+    }
+
+    &:before {
+        top: 0;
+        transform: translateX(-50%);
+    }
+
+    &:after {
+        bottom: 0;
+        transform: translateX(-50%) rotate(180deg);
+    }
+
+    &__text {
+        font-family: $font-alt;
+        font-style: italic;
+        color: $color-white;
+        font-size: 2.0833rem;
+        line-height: 3.333rem;
+        letter-spacing: 0.025em;
+
+        @include atSmall {
+            font-size: 1.5625rem;
+            line-height: 2.5rem;
+        }
+    }
+}

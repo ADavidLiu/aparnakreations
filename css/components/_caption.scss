@@ -1,0 +1,73 @@
+.caption {
+    position: absolute;
+    padding: 2.5rem;
+    background-color: rgba($color-primary, .68);
+    @include atSmall {
+        width: 455px;
+    }
+
+    &--big {
+        @include atSmall {
+            width: 560px;
+        }
+    }
+
+    &--left-center {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include atSmall {
+            left: 0;
+        }
+    }
+
+    &--center-left {
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+
+    &--center-bottom {
+        bottom: 2.5rem;
+        left: 0;
+    }
+
+    &--top-left {
+        top: 3.75rem;
+        left: 0;
+        right: auto;
+        bottom: auto;
+    }
+
+    &--bottom-right {
+        top: auto;
+        bottom: 3.75rem;
+        right: 0;
+        left: auto;
+    }
+
+    &--triangle {
+        background-image: url("../images/triangle-eq.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        padding: 6.875rem 7.8125rem 3.125rem 7.8125rem;
+        opacity: .8;
+        background-color: transparent;
+        width: auto;
+        
+        &.caption--left-center {
+            @include atSmall {
+                transform: translate(-50%, -50%) scale(.5);
+            }
+
+            @include atMedium {
+                transform: translate(-50%, -50%) scale(.8);
+            }
+
+            @include atLarge {
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}

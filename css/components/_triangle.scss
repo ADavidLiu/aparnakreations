@@ -1,0 +1,43 @@
+.triangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 50%;
+    height: auto;
+    pointer-events: none;
+    @include atSmall {
+        width: 25%;
+        max-width: 330px;
+    }
+
+    &--full {
+        width: 100%;
+        max-width: none;
+    }
+
+    &--transparent {
+        opacity: .8;
+    }
+
+    &--top-right {
+        left: auto;
+        right: 0;
+        transform: scaleX(-1);
+    }
+
+    &--bottom-right {
+        left: auto;
+        right: 0;
+        top: auto;
+        bottom: -1px;
+        transform: rotate(180deg);
+    }
+
+    &--bottom-left {
+        right: auto;
+        left: 0;
+        top: auto;
+        bottom: -1px;
+        transform: rotate(-180deg) scaleX(-1);
+    }
+}

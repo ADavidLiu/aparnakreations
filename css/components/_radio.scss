@@ -1,0 +1,50 @@
+.radio {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &__item {
+        &-input {
+            display: none;
+
+            &:checked {
+                & + .radio__item-label {
+                    &:before {
+                        background-color: $color-primary;
+                        box-shadow: 0 0 0 1px $color-white, inset 0 0 0 2px $color-black;
+                    }
+                }
+            }
+        }
+
+        &-label {
+            padding-left: 2.9167rem !important;
+            position: relative;
+            @include atSmall {
+                padding-left: 2.1875rem !important;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                height: 1.333rem;
+                width: 1.333rem;
+                border-radius: 50%;
+                box-shadow: 0 0 0 1px $color-white;
+                @include atSmall {
+                    height: 1rem;
+                    width: 1rem;
+                }
+            }
+        }
+
+        & + & {
+            margin-left: 4.375rem;
+        }
+    }
+}

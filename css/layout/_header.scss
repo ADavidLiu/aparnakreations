@@ -1,0 +1,92 @@
+.header {
+    position: absolute;
+    z-index: 999;
+    top: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+
+    &__content {
+        padding: 0 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include atSmall {
+            padding: 0 2.5rem;
+        }
+    }
+
+    &__logo {
+        display: block;
+        width: 40%;
+        max-width: 135px;
+
+
+        &-img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__btn {
+        padding: 0;
+        margin: 0;
+        appearance: none;
+        cursor: pointer;
+        height: 17px;
+        width: 2rem;
+        background: none;
+
+        @include atSmall {
+            display: none;
+        }
+
+        &-line {
+            position: relative;
+            display: block;
+
+            &,
+            &:before,
+            &:after {
+                height: 3px;
+                width: 2rem;
+                background-color: $color-primary;
+            }
+
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                left: 0;
+            }
+
+            &:before {
+                top: -7px;
+            }
+
+            &:after {
+                top: 7px;
+            }
+        }
+    }
+
+    &__nav {
+        background-color: $color-primary;
+        position: absolute;
+        bottom: -2.5rem;
+        left: 0;
+        width: 100%;
+        transform: translateY(100%);
+        padding: 1rem;
+        display: none;
+        @include atSmall {
+            display: block !important;
+            background: none;
+            position: static;
+            transform: none;
+            padding: 0;
+            width: auto;
+        }
+    }
+}

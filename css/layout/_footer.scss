@@ -1,0 +1,61 @@
+.footer {
+    padding: 6.875rem 15px;
+    text-align: center;
+    position: relative;
+    @include atSmall {
+        text-align: left;
+    }
+
+    &__content {
+        @include atSmall {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+    }
+
+    &__logo {
+        display: block;
+        margin-bottom: 1.667rem;
+        @include atSmall {
+            margin-bottom: 1.25rem;
+        }
+        
+        &-img {
+            width: 50%;
+            height: auto;
+            @include atSmall {
+                width: 85%;
+            }
+        }
+    }
+
+    &__info {
+        @include atSmall {
+            max-width: 235px;
+            margin-right: 3.75rem;
+        }
+    }
+
+    &__nav {
+        @include atSmall {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        &-group {
+            & + & {
+                @include atSmall {
+                    margin-left: 6.25rem;
+                }
+            }
+        }
+    }
+
+    &__list {
+        &-link {
+            @include linkStates(inherit, none);
+        }
+    }
+}

@@ -1,0 +1,46 @@
+// Fonts
+@font-face {font-family: 'Bender-Light';src: url('fonts/356F86_0_0.eot');src: url('fonts/356F86_0_0.eot?#iefix') format('embedded-opentype'),url('fonts/356F86_0_0.woff2') format('woff2'),url('fonts/356F86_0_0.woff') format('woff'),url('fonts/356F86_0_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'Bender-Italic';src: url('fonts/356F86_1_0.eot');src: url('fonts/356F86_1_0.eot?#iefix') format('embedded-opentype'),url('fonts/356F86_1_0.woff2') format('woff2'),url('fonts/356F86_1_0.woff') format('woff'),url('fonts/356F86_1_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'Bender-LightItalic';src: url('fonts/356F86_2_0.eot');src: url('fonts/356F86_2_0.eot?#iefix') format('embedded-opentype'),url('fonts/356F86_2_0.woff2') format('woff2'),url('fonts/356F86_2_0.woff') format('woff'),url('fonts/356F86_2_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'Bender-Bold';src: url('fonts/356F86_3_0.eot');src: url('fonts/356F86_3_0.eot?#iefix') format('embedded-opentype'),url('fonts/356F86_3_0.woff2') format('woff2'),url('fonts/356F86_3_0.woff') format('woff'),url('fonts/356F86_3_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'Bender';src: url('fonts/356F86_4_0.eot');src: url('fonts/356F86_4_0.eot?#iefix') format('embedded-opentype'),url('fonts/356F86_4_0.woff2') format('woff2'),url('fonts/356F86_4_0.woff') format('woff'),url('fonts/356F86_4_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'Bender-Black';src: url('fonts/356F86_5_0.eot');src: url('fonts/356F86_5_0.eot?#iefix') format('embedded-opentype'),url('fonts/356F86_5_0.woff2') format('woff2'),url('fonts/356F86_5_0.woff') format('woff'),url('fonts/356F86_5_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'Bender-BlackItalic';src: url('fonts/356F86_6_0.eot');src: url('fonts/356F86_6_0.eot?#iefix') format('embedded-opentype'),url('fonts/356F86_6_0.woff2') format('woff2'),url('fonts/356F86_6_0.woff') format('woff'),url('fonts/356F86_6_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'Bender-BoldItalic';src: url('fonts/356F86_7_0.eot');src: url('fonts/356F86_7_0.eot?#iefix') format('embedded-opentype'),url('fonts/356F86_7_0.woff2') format('woff2'),url('fonts/356F86_7_0.woff') format('woff'),url('fonts/356F86_7_0.ttf') format('truetype');}
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300i,400');
+ 
+$font-main: "Bender", "Helvetica", "Arial", sans-serif;
+$font-main-bld: "Bender-Bold", "Helvetica", "Arial", sans-serif;
+$font-alt: "Lato", "Helvetica", "Arial", sans-serif;
+
+// Colors
+$color-text: #282828;
+
+$color-primary: #d4145a;
+$color-primary-dark: #a51449;
+$color-primary-light: #ff6d6d;
+
+$color-white: #fff;
+$color-black: #000;
+$color-gray: #f0efef;
+$color-gray-alt: #f6f5f3;
+$color-gray-dark: #373737;
+$color-gray-dark-light: #4a4a4a;
+$color-gray-dark-alt: #2f2426;
+$color-gray-border: #9b9b9b;
+$color-gray-light: #cacaca;

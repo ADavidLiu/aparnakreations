@@ -1,0 +1,25 @@
+.list {
+    &__item {
+        &-title {
+            margin-bottom: 1.333rem;
+            @include atSmall {
+                margin-bottom: 1rem;
+            }
+        }
+
+        &-copy {
+            padding-left: 1.333rem;
+            border-left: 1px solid $color-primary;
+            @include atSmall {
+                padding-left: 1rem;
+            }
+        }
+
+        & + & {
+            margin-top: 1.333rem;
+            @include atSmall {
+                margin-top: 1rem;
+            }
+        }
+    }
+}

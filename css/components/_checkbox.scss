@@ -1,0 +1,42 @@
+.checkbox {
+    cursor: pointer;
+
+    &__input {
+        display: none;
+
+        &:checked {
+            & + .checkbox__label {
+                &:before {
+                    background-color: $color-primary;
+                }
+            }
+        }
+    }
+
+    &__label {
+        text-align: left;
+        line-height: 1.333rem;
+        padding-left: 3.333rem !important;
+        position: relative;
+        @include atSmall {
+            line-height: 1rem;
+            padding-left: 2.5rem !important;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 1.333rem;
+            width: 1.333rem;
+            border-radius: 4px;
+            border: 1px solid $color-white;
+            background-color: $color-gray-dark-alt;
+            @include atSmall {
+                height: 1rem;
+                width: 1rem;
+            }
+        }
+    }
+}

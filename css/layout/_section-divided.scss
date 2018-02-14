@@ -1,0 +1,156 @@
+.section-divided {
+    position: relative;
+    @include atSmall {
+        height: 45.3125rem;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+
+    &__column {
+        @include atSmall {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        flex-grow: 1;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        @include atSmall {
+            width: 55.5%;
+        }
+
+        &--big {
+            @include atSmall {
+                width: 65%;
+            }
+        }
+
+        &--bg-gray {
+            background-color: $color-gray;
+        }
+
+        &--right {
+            @include atSmall {
+                margin-left: auto;
+            }
+        }
+    }
+
+    &__sub {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        flex-grow: 1;
+        position: relative;
+        height: 500px;
+        padding: 5rem 3.125rem;
+        @include atSmall {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 44.5%;
+        }
+
+        &--left {
+            right: auto;
+            left: 0;
+        }
+
+        &--small {
+            @include atSmall {
+                width: 35%;
+            }
+        }
+    }
+
+    &__copy {
+        padding-top: 10.625rem;
+        padding-bottom: 10.625rem;
+        @include atSmall {
+            padding-top: 0;
+            padding-bottom: 0;
+            width: 80%;
+        }
+
+        &--big {
+            @include atSmall {
+                width: 85%;
+            }
+        }
+
+        &--alt {
+            padding-top: 5.625rem;
+            padding-bottom: 0;
+            width: 100%;
+            @include atSmall {
+                padding-top: 0;
+            }
+        }
+
+        &--triangle-top {
+            padding-top: 15rem;
+            @include atSmall {
+                padding-top: 0;
+            }
+        }
+    }
+
+    & > *:not(.triangle) {
+        &,
+        .row,
+        [class^="col"] {
+            @include atSmall {
+                height: 100%;
+            }
+        }
+    }
+
+    &--diagonal {
+        @include atSmall {
+            height: 34.0625rem;
+        }
+
+        .section-divided {
+            &__main,
+            &__sub {
+                height: 34.0625rem;
+            }
+
+            &__main {
+                position: relative;
+                z-index: 2;
+                margin-bottom: -8rem;
+                clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+                @include atSmall {
+                    margin-bottom: 0;
+                    flex-grow: 0;
+                    clip-path: polygon(0 0, 100% 0, 60% 100%, 0 100%);
+                }
+            }
+
+            &__sub {
+                z-index: 1;
+                background-position: right center;
+                @include atSmall {
+                    width: 70%;
+                }
+            }
+        }
+    }
+
+    &--small {
+        @include atSmall {
+            height: 37.5rem;
+        }
+    }
+}

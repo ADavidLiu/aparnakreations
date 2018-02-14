@@ -1,0 +1,29 @@
+.banner {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 44.167rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    @include atSmall {
+        height: 33.125rem;
+    }
+
+    &__copy {
+        text-align: center;
+        @include atSmall {
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &--big {
+        height: 67.5rem;
+        @include atSmall {
+            height: 50.625rem;
+        }
+    }
+}
